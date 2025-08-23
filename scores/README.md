@@ -16,17 +16,15 @@ These scores are generated using the original CT scans, without any additional p
 
 ### Cropped images
 
-CT scans are cropped to the lung region using a lung segmentation model.
-
-TODO! Update and correct description when available.
+CT scans are cropped to the lung region using a lung segmentation model. The resulting files contain only the lung region, with all other areas removed.
 
 ### Masked images
 
-TODO! Update and correct description when available.
+These files are derived from the cropped images, but all voxels outside the lung region are set to zero, so only the lung is visible.
 
 ### Masked and resized images
 
-TODO! Update and correct description when available.
+These files are the masked images further resized to a standard shape of 256x256x256 voxels.
 
 ## ResNet feature extractor scores
 
@@ -35,8 +33,6 @@ These scores are generated using a ResNet18-based feature extractor. CT scans ar
 ## Air Resnet feature extractor scores
 
 Analogous to the ResNet feature extractor scores, but using the air distribution.
-
-TODO! Update and correct description when available.
 
 ## Score correlation tests and tnterpretation
 
