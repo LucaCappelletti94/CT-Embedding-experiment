@@ -1,16 +1,31 @@
 Metric,Correlation,P-value,Model,Number of samples
-Spearman,0.28678079887081914,0.1244163315487482,Resnet18 based air,30
-Pearson,0.2942699786578288,0.11445641226163676,Resnet18 based air,30
-Kendall's Tau,0.22617634892029104,0.10106553918363655,Resnet18 based air,30
+Mantel Pearson,0.595098170907239,0.006944444444444444,Resnet18 based,6
+Mantel Spearman,0.5930111818413242,0.013888888888888888,Resnet18 based,6
+Pearson,0.5640788097519586,0.001168028065600239,Resnet18 based,30
+Spearman,0.5402051629123285,0.0020595996698491307,Resnet18 based,30
+Mantel Pearson,0.5291720480034666,0.0375,Lighter feature extractor masked resized,6
+Pearson,0.5015890714917518,0.004744120457150684,Lighter feature extractor masked resized,30
+Kendall's Tau,0.4437720395501619,0.002930123000874538,Resnet18 based,30
+Mantel Spearman,0.4079146265423017,0.12083333333333333,Lighter feature extractor masked resized,6
+Spearman,0.38146829802405957,0.037525726090401536,Lighter feature extractor masked resized,30
+Mantel Spearman,0.3216595513263084,0.2361111111111111,Lighter feature extractor original,6
 Mantel Spearman,0.3180655898589753,0.23472222222222222,Resnet18 based air,6
 Mantel Pearson,0.31045223295870866,0.2125,Resnet18 based air,6
-Spearman,0.26095693546538995,0.16366284413701168,Lighter feature extractor,30
-Pearson,0.17682510026048204,0.34991609790864975,Lighter feature extractor,30
-Kendall's Tau,0.18596722022335038,0.17759221219515664,Lighter feature extractor,30
-Mantel Spearman,0.3216595513263084,0.2361111111111111,Lighter feature extractor,6
-Mantel Pearson,0.18654892173980758,0.5847222222222223,Lighter feature extractor,6
-Spearman,0.5402051629123285,0.0020595996698491307,Resnet18 based,30
-Pearson,0.5640788097519587,0.001168028065600239,Resnet18 based,30
-Kendall's Tau,0.4437720395501619,0.002930123000874538,Resnet18 based,30
-Mantel Spearman,0.5930111818413242,0.013888888888888888,Resnet18 based,6
-Mantel Pearson,0.595098170907239,0.006944444444444444,Resnet18 based,6
+Kendall's Tau,0.30156846522705466,0.028795154780475965,Lighter feature extractor masked resized,30
+Pearson,0.29426997865782883,0.11445641226163647,Resnet18 based air,30
+Spearman,0.28678079887081914,0.1244163315487482,Resnet18 based air,30
+Spearman,0.26095693546538995,0.16366284413701168,Lighter feature extractor original,30
+Kendall's Tau,0.22617634892029104,0.10106553918363655,Resnet18 based air,30
+Mantel Pearson,0.1880588682451049,0.5805555555555556,Lighter feature extractor original,6
+Kendall's Tau,0.18596722022335038,0.17759221219515664,Lighter feature extractor original,30
+Pearson,0.17825634113658628,0.34596671542928326,Lighter feature extractor original,30
+Kendall's Tau,-0.12062738609082187,0.3818395724491166,Lighter feature extractor cropped,30
+Spearman,-0.16355113490105166,0.38781948520133747,Lighter feature extractor cropped,30
+Mantel Spearman,-0.1850890155676523,0.55,Lighter feature extractor cropped,6
+Kendall's Tau,-0.22617634892029104,0.10106553918363655,Lighter feature extractor masked,30
+Pearson,-0.2632793860180392,0.15981054738491693,Lighter feature extractor cropped,30
+Spearman,-0.274095392285696,0.1427217870649619,Lighter feature extractor masked,30
+Mantel Pearson,-0.2777574309621937,0.3458333333333333,Lighter feature extractor cropped,6
+Pearson,-0.33759145431633397,0.06807985498857903,Lighter feature extractor masked,30
+Mantel Pearson,-0.3561560078207982,0.1736111111111111,Lighter feature extractor masked,6
+Mantel Spearman,-0.36119312746697196,0.19305555555555556,Lighter feature extractor masked,6

@@ -10,6 +10,22 @@ These are the scores provided by human experts, which are used as a reference fo
 
 These scores are generated using the [Lighter feature extractor](https://huggingface.co/project-lighter/ct_fm_feature_extractor), which is a method for extracting an embedding from CT scans, which are them used to compute cosine similarity matrices.
 
+### Original images
+
+These scores are generated using the original CT scans, without any additional preprocessing.
+
+### Cropped images
+
+TODO!
+
+### Masked images
+
+TODO!
+
+### Masked and resized images
+
+TODO!
+
 ## ResNet feature extractor scores
 
 These scores are generated using a ResNet18-based feature extractor. CT scans are preprocessed by segmenting and cropping the lung region, extracting 18 coronal slices, normalizing to 8-bit images, and resizing to 224x224. Features are obtained from a pre-trained ResNet18 (excluding the final layer), concatenated across slices, and cosine similarity matrices are computed between patient embeddings.

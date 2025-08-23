@@ -1,7 +1,9 @@
 """Script to determine the correlation between the human determined similarity matrix and all the other similarity matrices."""
 
-import pandas as pd
 from glob import glob
+import pandas as pd
+import numpy as np
+import mantel
 from sanitize_ml_labels import sanitize_ml_labels
 
 
@@ -79,10 +81,16 @@ def execute_matrix_correlation_tests(
     Returns:
         pd.DataFrame: Mantel test results.
     """
-    import mantel
 
     # The human matrix is not necessarily symmetric, so we make it symmetric
     symmetric_human_df = (human_df + human_df.T) / 2
+
+    # Due to float errors, also the model matrix might not be perfectly symmetric
+    model_df = (model_df + model_df.T) / 2
+
+    # We ensure that the diagonals are exactly 1.0
+    np.fill_diagonal(symmetric_human_df.values, 1.0)
+    np.fill_diagonal(model_df.values, 1.0)
 
     # We convert the two similarity matrices into distance matrices
     symmetric_human_df_distance = 1.0 - symmetric_human_df
@@ -148,6 +156,12 @@ if __name__ == "__main__":
         test_results.append(execute_correlation_tests(human_determined, df, name))
 
     test_results_df: pd.DataFrame = pd.concat(test_results, axis=0)
+
+    # We sort the dataframe by Correlation descending and then by P-value ascending
+    test_results_df = test_results_df.sort_values(
+        by=["Correlation", "P-value"], ascending=[False, True]
+    )
+
     test_results_df.to_csv("correlation_tests_results.csv", index=False)
 
     # Print the results to the console

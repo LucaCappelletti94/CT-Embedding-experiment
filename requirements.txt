@@ -2,3 +2,6 @@ mantel
 pandas
 sanitize_ml_labels
 lighter_zoo>=0.1.3
+cache-decorator
+optree>=0.13.0
+silence-tensorflow
