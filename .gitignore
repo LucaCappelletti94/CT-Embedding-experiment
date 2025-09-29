@@ -209,3 +209,9 @@ __marimo__/
 *.nii.gz
 images/*
 cache/
+.gitignore
+pt_hpo_terms.tsv
+graphs
+pt_hpo_edges.tsv
+pt_hpo_nodes.tsv
+kg_report.html
