@@ -215,3 +215,6 @@ graphs
 pt_hpo_edges.tsv
 pt_hpo_nodes.tsv
 kg_report.html
+THORACIC_DATA.DAT
+data_header.tsv
+imputed_features.tsv
